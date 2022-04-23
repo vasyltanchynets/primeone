@@ -1,0 +1,48 @@
+.footer {
+  &__container {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    @media (max-width: $md2) {
+      padding: 30px 10px;
+    }
+    @media (max-width: 550px) {
+      flex-direction: column;
+    }
+  }
+
+  &__copy {
+    font-family: $fontfamily;
+    font-size: 15px;
+    transform: scale(0);
+    transition: all 1.2s ease 0s;
+    &._active {
+      transform: scale(1);
+    }
+    @media (max-width: 550px) {
+      text-align: center;
+      order: 2;
+      transition: all 1.2s ease 0.1s;
+    }
+  }
+
+  &__logo {
+    transform: scale(0);
+    transition: all 1.2s ease 0s;
+    &._active {
+      transform: scale(1);
+    }
+    img {
+      height: 40px;
+    }
+    @media (max-width: 550px) {
+      padding: 0 0 15px 0;
+    }
+  }
+}
